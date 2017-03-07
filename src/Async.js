@@ -139,14 +139,6 @@ export default class Async extends Component {
 	_onInputChange (inputValue) {
 		const { ignoreAccents, ignoreCase, onInputChange } = this.props;
 
-		if (ignoreAccents) {
-			inputValue = stripDiacritics(inputValue);
-		}
-
-		if (ignoreCase) {
-			inputValue = inputValue.toLowerCase();
-		}
-
 		if (onInputChange) {
 			onInputChange(inputValue);
 		}
